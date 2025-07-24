@@ -24,11 +24,14 @@
 
 
 <h2>📬 Let's Connect:<a href="mailto:preetheshcarvalho57@gmail.com">preetheshcarvalho57@gmail.com</a></h2>  
-<a href="https://www.linkedin.com/in/preetheshcarvalho">
-     <img src="https://api.iconify.design/skill-icons:linkedin.svg" alt="LinkedIn" height="35" width="35" />
-   </a>&nbsp;&nbsp;
-   <a href="mailto:preetheshcarvalho57@gmail.com">
-      <img src="https://api.iconify.design/flat-color-icons:google.svg" alt="Email" height="35" width="35" />
-   </a>
+<p align="left">
+  <a href="https://www.linkedin.com/in/preetheshcarvalho" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="35" />
+  </a>
+  <a href="mailto:preetheshcarvalho57@gmail.com" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail" width="35" />
+  </a>
+</p>
+
 
    <hr>
