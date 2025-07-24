@@ -23,15 +23,13 @@
 <hr>
 
 
-<h2>📬 Let's Connect:<a href="mailto:preetheshcarvalho57@gmail.com">preetheshcarvalho57@gmail.com</a></h2>  
-<p align="left">
-  <a href="https://www.linkedin.com/in/preetheshcarvalho" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="35" />
-  </a>
-  <a href="mailto:preetheshcarvalho57@gmail.com" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail" width="35" />
-  </a>
-</p>
+## 📬 Reach Out
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/preetheshcarvalho)
+[![Gmail](https://img.shields.io/badge/Gmail-red?logo=gmail&style=for-the-badge)](mailto:preetheshcarvalho57@gmail.com)
+[![CodeChef](https://img.shields.io/badge/CodeChef-5B4638?logo=codechef&logoColor=white&style=for-the-badge)](https://www.codechef.com/users/mr_lnfinity_57)
+[![Twitter](https://img.shields.io/badge/X-000000?logo=twitter&logoColor=white&style=for-the-badge)](https://x.com/Preethucarvalho)
+
 
 
    <hr>
