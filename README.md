@@ -1,12 +1,12 @@
 # 👋 Hola, I’m Preethesh
 
-🎓 Computer Science and Business Systems student at SJEC
-📱 I design and develop mobile apps with a focus on usability and performance
-🧠 Skilled in Flutter, Firebase, Kotlin, Node.js, and modern development tools
-🌱 Constantly learning and exploring new tools in software and design
-📊 Interested in product design, startup ecosystems, and automation
-📈 Blending technical depth with business insight to drive impact
-🤝 Open to collaboration, feedback, and new ideas in tech and beyond
+🎓 Computer Science and Business Systems student at SJEC  
+📱 I design and develop mobile apps with a focus on usability and performance  
+🧠 Skilled in Flutter, Firebase, Kotlin, Node.js, and modern development tools  
+🌱 Constantly learning and exploring new tools in software and design  
+📊 Interested in product design, startup ecosystems, and automation  
+📈 Blending technical depth with business insight to drive impact  
+🤝 Open to collaboration, feedback, and new ideas in tech and beyond  
 
 
 # 💻 Tech Stack:
