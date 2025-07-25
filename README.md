@@ -25,8 +25,8 @@
 
 ## 📬 Reach Out
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/preetheshcarvalho)
-[![Gmail](https://img.shields.io/badge/Gmail-red?logo=gmail&style=for-the-badge)](mailto:preetheshcarvalho57@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/preethesh-carvalho-2aab192a9/)
+[![Gmail](https://img.shields.io/badge/Gmail-red?logo=gmail&style=for-the-badge)](preetheshcarvalho57@gmail.com)
 [![CodeChef](https://img.shields.io/badge/CodeChef-5B4638?logo=codechef&logoColor=white&style=for-the-badge)](https://www.codechef.com/users/mr_lnfinity_57)
 [![Twitter](https://img.shields.io/badge/X-000000?logo=twitter&logoColor=white&style=for-the-badge)](https://x.com/Preethucarvalho)
 
