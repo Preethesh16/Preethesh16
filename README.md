@@ -80,7 +80,7 @@
   <table border="0" cellpadding="12">
     <tr>
       <td align="center" bgcolor="#111827"><a href="https://www.linkedin.com/in/preetheshcarvalho/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="36" alt="LinkedIn" /><br /><b>LinkedIn</b></a></td>
-      <td align="center" bgcolor="#111827"><a href="https://preethesh.dev"><img src="https://cdn.simpleicons.org/googlechrome/8B5CF6" width="36" alt="Portfolio" /><br /><b>Portfolio</b></a></td>
+      <td align="center" bgcolor="#111827"><a href="https://preetheshcarvalho.tech"><img src="https://cdn.simpleicons.org/googlechrome/8B5CF6" width="36" alt="Portfolio" /><br /><b>Portfolio</b></a></td>
       <td align="center" bgcolor="#111827"><a href="mailto:preetheshcarvalho57@gmail.com"><img src="https://cdn.simpleicons.org/gmail/EA4335" width="36" alt="Email" /><br /><b>Email</b></a></td>
       <td align="center" bgcolor="#111827"><a href="https://x.com/Preethucarvalho"><img src="https://cdn.simpleicons.org/x/F8FAFC" width="36" alt="X" /><br /><b>X</b></a></td>
       <td align="center" bgcolor="#111827"><a href="https://www.codechef.com/users/mr_lnfinity_57"><img src="https://cdn.simpleicons.org/codechef/F59E0B" width="36" alt="CodeChef" /><br /><b>CodeChef</b></a></td>
