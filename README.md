@@ -52,21 +52,28 @@
 
 ## 📊 GitHub activity
 
-<div align="center">
-  <a href="https://github.com/Preethesh16">
-    <img width="48%" src="https://github-stats-extended.vercel.app/api?username=Preethesh16&show_icons=true&hide_border=true&theme=tokyonight&rank_icon=github&include_all_commits=true&count_private=false" alt="Preethesh's GitHub stats" loading="lazy" />
-  </a>
-  <a href="https://github.com/Preethesh16">
-    <img width="48%" src="https://github-stats-extended.vercel.app/api/top-langs/?username=Preethesh16&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" alt="Preethesh's top languages" loading="lazy" />
-  </a>
-</div>
+<table align="center" border="0" cellpadding="0" cellspacing="8">
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="https://github.com/Preethesh16">
+        <img width="100%" src="https://github-stats-extended.vercel.app/api?username=Preethesh16&show_icons=true&hide_border=true&theme=tokyonight&rank_icon=github&include_all_commits=true&count_private=false&card_width=480" alt="Preethesh's GitHub stats" loading="lazy" />
+      </a>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a href="https://github.com/Preethesh16">
+        <img width="100%" src="https://github-stats-extended.vercel.app/api/top-langs/?username=Preethesh16&layout=compact&hide_border=true&theme=tokyonight&langs_count=6&card_width=480" alt="Preethesh's top languages" loading="lazy" />
+      </a>
+    </td>
+  </tr>
+</table>
 
-<div align="center">
-  <br />
-  <img src="https://streak-stats.demolab.com?user=Preethesh16&theme=tokyonight&hide_border=true" alt="Preethesh's GitHub contribution streak" loading="lazy" />
-  <br /><br />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Preethesh16&bg_color=0d1117&color=38bdf8&line=8b5cf6&point=f8fafc&area=true&hide_border=true" alt="Preethesh's contribution activity graph" width="95%" loading="lazy" />
-</div>
+<p align="center">
+  <img width="58%" src="https://streak-stats.demolab.com?user=Preethesh16&theme=tokyonight&hide_border=true" alt="Preethesh's GitHub contribution streak" loading="lazy" />
+</p>
+
+<p align="center">
+  <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=Preethesh16&bg_color=0d1117&color=38bdf8&line=8b5cf6&point=f8fafc&area=true&hide_border=true" alt="Preethesh's contribution activity graph" loading="lazy" />
+</p>
 
 <hr />
 
