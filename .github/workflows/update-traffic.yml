@@ -1,0 +1,34 @@
+name: Update repository traffic
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-traffic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch clone traffic
+        env:
+          TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+        run: |
+          curl --fail-with-body --silent --show-error \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${TRAFFIC_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/Preethesh16/Preethesh16/traffic/clones \
+            | jq '{schemaVersion: 1, label: "clones (14 days)", message: ((.count|tostring) + " total / " + (.uniques|tostring) + " unique"), color: "38bdf8"}' > traffic.json
+
+      - name: Commit updated traffic
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add traffic.json
+          git diff --cached --quiet || git commit -m "Update repository clone traffic"
+          git push

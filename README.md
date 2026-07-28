@@ -92,6 +92,18 @@
 
 <hr />
 
+## 📥 Repository traffic
+
+<div align="center">
+  <a href="https://github.com/Preethesh16/Preethesh16/graphs/traffic">
+    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Preethesh16/Preethesh16/main/traffic.json" alt="Repository clones in the last 14 days" />
+  </a>
+</div>
+
+<p align="center"><sub>Clone data covers the latest 14 days and updates automatically.</sub></p>
+
+<hr />
+
 <div align="center">
   <i>“Build things that make people’s work a little easier.”</i>
 </div>
