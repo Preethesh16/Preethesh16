@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./github_banner_minimal_pro.gif" alt="Preethesh Carvalho — turning ideas into impact" width="100%" loading="eager" />
+  <img src="./banner.gif" alt="Preethesh Carvalho — turning ideas into impact" width="100%" loading="eager" />
 
   <h1>Preethesh Carvalho</h1>
   <p><b>Full-Stack & AI Systems Engineer · CSBS student · Product-minded builder</b></p>
@@ -54,10 +54,10 @@
 
 <div align="center">
   <a href="https://github.com/Preethesh16">
-    <img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Preethesh16&theme=tokyonight" alt="Preethesh's GitHub stats" loading="lazy" />
+    <img width="48%" src="https://github-stats-extended.vercel.app/api?username=Preethesh16&show_icons=true&hide_border=true&theme=tokyonight&rank_icon=github&include_all_commits=true&count_private=false" alt="Preethesh's GitHub stats" loading="lazy" />
   </a>
   <a href="https://github.com/Preethesh16">
-    <img width="48%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Preethesh16&theme=tokyonight" alt="Preethesh's top languages" loading="lazy" />
+    <img width="48%" src="https://github-stats-extended.vercel.app/api/top-langs/?username=Preethesh16&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" alt="Preethesh's top languages" loading="lazy" />
   </a>
 </div>
 
