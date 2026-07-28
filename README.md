@@ -96,11 +96,11 @@
 
 <div align="center">
   <a href="https://github.com/Preethesh16/Preethesh16/graphs/traffic">
-    <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Preethesh16/Preethesh16/main/traffic.json" alt="Repository clones in the last 14 days" />
+    <img width="760" src="./traffic.svg" alt="Preethesh16 repository clone history" />
   </a>
 </div>
 
-<p align="center"><sub>Clone data covers the latest 14 days and updates automatically.</sub></p>
+<p align="center"><sub>Lifetime tracking started July 29, 2026 · refreshed daily from GitHub traffic analytics</sub></p>
 
 <hr />
 
