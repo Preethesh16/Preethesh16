@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "label": "all-time tracked clones",
-  "message": "34",
-  "color": "8b5cf6"
+  "color": "8b5cf6",
+  "label": "overall tracked clones",
+  "message": "388",
+  "schemaVersion": 1
 }
