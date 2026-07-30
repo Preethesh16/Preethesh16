@@ -77,6 +77,18 @@
 
 <hr />
 
+## 📥 Portfolio clone report
+
+<div align="center">
+  <a href="https://github.com/Preethesh16?tab=repositories">
+    <img width="760" src="./traffic.svg" alt="Clone history across Preethesh16 repositories" />
+  </a>
+</div>
+
+<p align="center"><sub>Account-wide tracking started July 29, 2026 · per-repository history refreshed daily</sub></p>
+
+<hr />
+
 ## 🤝 Let’s connect
 
 <div align="center">
@@ -96,18 +108,6 @@
 </div>
 
 <br />
-
-<hr />
-
-## 📥 Repository traffic
-
-<div align="center">
-  <a href="https://github.com/Preethesh16/Preethesh16/graphs/traffic">
-    <img width="760" src="./traffic.svg" alt="Preethesh16 repository clone history" />
-  </a>
-</div>
-
-<p align="center"><sub>Lifetime tracking started July 29, 2026 · refreshed daily from GitHub traffic analytics</sub></p>
 
 <hr />
 
