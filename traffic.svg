@@ -19,9 +19,9 @@
   <line x1="384" y1="35" x2="384" y2="218" stroke="#27324A"/>
   <text x="425" y="52" fill="#E2E8F0" font-size="13" font-weight="700">TOP CLONED PROJECTS · TRACKED</text>
   <text x="425" y="105" fill="#CBD5E1" font-size="12">Gavel-Xl</text><text x="745" y="105" fill="#A78BFA" font-size="12" font-weight="700" text-anchor="end">982</text><text x="425" y="132" fill="#CBD5E1" font-size="12">Humsafar</text><text x="745" y="132" fill="#A78BFA" font-size="12" font-weight="700" text-anchor="end">769</text><text x="425" y="159" fill="#CBD5E1" font-size="12">Codex</text><text x="745" y="159" fill="#A78BFA" font-size="12" font-weight="700" text-anchor="end">755</text>
-  <polyline points="425.0,197.0 437.3,197.0 449.6,197.0 461.9,197.0 474.2,197.0 486.5,197.0 498.8,197.0 511.2,197.0 523.5,197.0 535.8,197.0 548.1,197.0 560.4,197.0 572.7,190.3 585.0,196.5 597.3,195.8 609.6,196.3 621.9,196.7 634.2,196.5 646.5,196.3 658.8,195.5 671.2,153.0 683.5,196.6 695.8,196.6 708.1,193.2 720.4,194.1 732.7,193.2 745.0,197.0" fill="none" stroke="url(#accent)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <polyline points="425.0,197.0 436.9,197.0 448.7,197.0 460.6,197.0 472.4,197.0 484.3,197.0 496.1,197.0 508.0,197.0 519.8,197.0 531.7,197.0 543.5,197.0 555.4,197.0 567.2,190.3 579.1,196.5 590.9,195.8 602.8,196.3 614.6,196.7 626.5,196.5 638.3,196.3 650.2,195.5 662.0,153.0 673.9,196.6 685.7,196.6 697.6,193.2 709.4,194.1 721.3,193.2 733.1,197.0 745.0,197.0" fill="none" stroke="url(#accent)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
   <line x1="425" y1="202" x2="745" y2="202" stroke="#334155" stroke-dasharray="3 5"/>
   <text x="425" y="224" fill="#64748B" font-size="9">DAILY MOMENTUM ACROSS ALL REPOS</text>
-  <text x="745" y="224" fill="#475569" font-size="9" text-anchor="end">updated Sep 06, 2026</text>
+  <text x="745" y="224" fill="#475569" font-size="9" text-anchor="end">updated Sep 07, 2026</text>
 </g>
 </svg>
