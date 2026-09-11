@@ -77,7 +77,7 @@
 
 <hr />
 
-## 📥 Portfolio clone report
+## 📈 Repository traffic
 
 <div align="center">
   <a href="https://github.com/Preethesh16?tab=repositories">
@@ -85,7 +85,7 @@
   </a>
 </div>
 
-<p align="center"><sub>Account-wide tracking started July 29, 2026 · per-repository history refreshed daily</sub></p>
+<p align="center"><sub>Account-wide clone intelligence · tracking since July 29, 2026 · refreshed daily</sub></p>
 
 <hr />
 

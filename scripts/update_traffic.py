@@ -57,7 +57,7 @@ def owned_repositories(token):
         page += 1
 
 
-def sparkline(values, x=425, y=153, width=320, height=44):
+def sparkline(values, x=397, y=238, width=358, height=34):
     values = values or [0]
     peak = max(max(values), 1)
     step = width / max(len(values) - 1, 1)
@@ -70,46 +70,78 @@ def sparkline(values, x=425, y=153, width=320, height=44):
     return " ".join(points)
 
 
+def compact_name(name, limit=22):
+    """Keep long repository names inside the fixed-width SVG column."""
+    return name if len(name) <= limit else name[: limit - 1] + "…"
+
+
 def render_svg(total, recent, repo_count, daily, top_repos, updated):
     points = sparkline(daily)
     top_lines = []
+    peak_repo = max((count for _, count in top_repos[:3]), default=1) or 1
     for index, (name, count) in enumerate(top_repos[:3]):
-        y = 105 + index * 27
-        safe_name = html.escape(name)
+        y = 112 + index * 43
+        bar_width = max(18, round(260 * count / peak_repo))
+        safe_name = html.escape(compact_name(name))
         top_lines.append(
-            f'<text x="425" y="{y}" fill="#CBD5E1" font-size="12">{safe_name}</text>'
-            f'<text x="745" y="{y}" fill="#A78BFA" font-size="12" '
-            f'font-weight="700" text-anchor="end">{count}</text>'
+            f'<text x="397" y="{y}" fill="#526174" font-size="10" '
+            f'font-weight="700">0{index + 1}</text>'
+            f'<text x="429" y="{y}" fill="#D7E1EC" font-size="12" '
+            f'font-weight="600">{safe_name}</text>'
+            f'<text x="755" y="{y}" fill="#32D7FF" font-size="12" '
+            f'font-weight="800" text-anchor="end">{count:,}</text>'
+            f'<rect x="429" y="{y + 12}" width="260" height="3" rx="1.5" fill="#172333"/>'
+            f'<rect x="429" y="{y + 12}" width="{bar_width}" height="3" rx="1.5" fill="#32D7FF"/>'
         )
     top_markup = "".join(top_lines) or (
-        '<text x="425" y="105" fill="#64748B" font-size="12">Waiting for clone data</text>'
+        '<text x="397" y="112" fill="#64748B" font-size="12">Waiting for clone data</text>'
     )
 
-    return f"""<svg width="800" height="250" viewBox="0 0 800 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{total} tracked clones across {repo_count} repositories">
+    return f"""<svg width="800" height="320" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{total} tracked clones across {repo_count} repositories">
 <defs>
-  <linearGradient id="card" x1="0" y1="0" x2="800" y2="250"><stop stop-color="#080D19"/><stop offset=".55" stop-color="#111827"/><stop offset="1" stop-color="#1A1033"/></linearGradient>
-  <linearGradient id="accent" x1="28" y1="20" x2="770" y2="230"><stop stop-color="#22D3EE"/><stop offset=".52" stop-color="#8B5CF6"/><stop offset="1" stop-color="#EC4899"/></linearGradient>
-  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5" result="b"/><feComposite in="b" in2="SourceGraphic" operator="over"/></filter>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#263244" stroke-opacity=".22"/>
+  </pattern>
+  <clipPath id="plot"><rect x="394" y="234" width="364" height="42" rx="4"/></clipPath>
 </defs>
-<rect x="1" y="1" width="798" height="248" rx="22" fill="url(#card)" stroke="#2B3651" stroke-width="2"/>
-<rect x="24" y="24" width="5" height="202" rx="2.5" fill="url(#accent)" filter="url(#glow)"/>
-<circle cx="750" cy="25" r="75" fill="#8B5CF6" fill-opacity=".07"/>
+<rect x="1" y="1" width="798" height="318" rx="18" fill="#080D14" stroke="#263244" stroke-width="2"/>
+<rect x="2" y="2" width="796" height="316" rx="17" fill="url(#grid)"/>
+<path d="M1 18C1 8.6 8.6 1 18 1H782C791.4 1 799 8.6 799 18V66H1V18Z" fill="#0D141E"/>
+<line x1="1" y1="66" x2="799" y2="66" stroke="#263244"/>
+<rect x="1" y="66" width="4" height="188" fill="#32D7FF"/>
 <g font-family="'Segoe UI', Ubuntu, Arial, sans-serif">
-  <text x="52" y="48" fill="#94A3B8" font-size="12" font-weight="700" letter-spacing="2.2">ACCOUNT CLONE PULSE</text>
-  <circle cx="243" cy="44" r="4" fill="#22C55E"/><text x="255" y="48" fill="#86EFAC" font-size="10" font-weight="700">LIVE</text>
-  <text x="52" y="122" fill="#F8FAFC" font-size="58" font-weight="800">{total}</text>
-  <text x="54" y="146" fill="#C4B5FD" font-size="12" font-weight="700" letter-spacing="1.1">OVERALL TRACKED CLONES</text>
-  <text x="54" y="181" fill="#38BDF8" font-size="24" font-weight="800">{recent}</text>
-  <text x="93" y="180" fill="#64748B" font-size="11">clones · last 14 days</text>
-  <text x="54" y="211" fill="#A78BFA" font-size="20" font-weight="800">{repo_count}</text>
-  <text x="87" y="210" fill="#64748B" font-size="11">repositories tracked</text>
-  <line x1="384" y1="35" x2="384" y2="218" stroke="#27324A"/>
-  <text x="425" y="52" fill="#E2E8F0" font-size="13" font-weight="700">TOP CLONED PROJECTS · TRACKED</text>
+  <rect x="30" y="27" width="12" height="12" rx="2" fill="#32D7FF"/>
+  <rect x="47" y="27" width="12" height="12" rx="2" fill="#32D7FF" fill-opacity=".3"/>
+  <text x="75" y="38" fill="#E7EEF7" font-size="12" font-weight="800">PREETHESH / REPOSITORY INTELLIGENCE</text>
+  <text x="75" y="51" fill="#526174" font-size="9">ACCOUNT-WIDE CLONE TELEMETRY</text>
+  <rect x="683" y="22" width="82" height="28" rx="14" fill="#0A2428" stroke="#176273"/>
+  <circle cx="701" cy="36" r="3" fill="#32D7FF"/>
+  <text x="712" y="40" fill="#7DE9FF" font-size="9" font-weight="800">LIVE FEED</text>
+
+  <text x="40" y="92" fill="#526174" font-size="9" font-weight="700">SYSTEM METRIC / 01</text>
+  <text x="40" y="117" fill="#94A3B8" font-size="11" font-weight="700">TOTAL TRACKED CLONES</text>
+  <text x="35" y="180" fill="#F8FAFC" font-size="68" font-weight="800">{total:,}</text>
+  <line x1="40" y1="193" x2="348" y2="193" stroke="#263244"/>
+
+  <rect x="40" y="211" width="145" height="61" rx="8" fill="#0D151F" stroke="#263244"/>
+  <text x="56" y="239" fill="#32D7FF" font-size="21" font-weight="800">{recent:,}</text>
+  <text x="56" y="257" fill="#64748B" font-size="9" font-weight="700">LAST 14 DAYS</text>
+  <rect x="197" y="211" width="151" height="61" rx="8" fill="#0D151F" stroke="#263244"/>
+  <text x="213" y="239" fill="#F8FAFC" font-size="21" font-weight="800">{repo_count:,}</text>
+  <text x="213" y="257" fill="#64748B" font-size="9" font-weight="700">REPOSITORIES</text>
+  <text x="40" y="297" fill="#526174" font-size="9">ARCHIVE ACTIVE / SINCE 29 JUL 2026</text>
+
+  <line x1="373" y1="86" x2="373" y2="296" stroke="#263244"/>
+  <text x="397" y="91" fill="#E7EEF7" font-size="12" font-weight="800">LEADERBOARD</text>
+  <text x="755" y="91" fill="#526174" font-size="9" font-weight="700" text-anchor="end">CLONES</text>
   {top_markup}
-  <polyline points="{points}" fill="none" stroke="url(#accent)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
-  <line x1="425" y1="202" x2="745" y2="202" stroke="#334155" stroke-dasharray="3 5"/>
-  <text x="425" y="224" fill="#64748B" font-size="9">DAILY MOMENTUM ACROSS ALL REPOS</text>
-  <text x="745" y="224" fill="#475569" font-size="9" text-anchor="end">updated {updated}</text>
+  <line x1="397" y1="220" x2="755" y2="220" stroke="#263244"/>
+  <text x="397" y="232" fill="#526174" font-size="8" font-weight="700">14-DAY SIGNAL</text>
+  <g clip-path="url(#plot)">
+    <line x1="397" y1="272" x2="755" y2="272" stroke="#263244" stroke-dasharray="3 6"/>
+    <polyline points="{points}" fill="none" stroke="#32D7FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="755" y="297" fill="#526174" font-size="9" text-anchor="end">SYNC / {updated.upper()}</text>
 </g>
 </svg>
 """
