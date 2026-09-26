@@ -1,4 +1,4 @@
-<svg width="800" height="320" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="5680 tracked clones across 53 repositories">
+<svg width="800" height="320" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="5680 tracked clones across 55 repositories">
 <defs>
   <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
     <path d="M24 0H0V24" fill="none" stroke="#263244" stroke-opacity=".22"/>
@@ -28,7 +28,7 @@
   <text x="56" y="239" fill="#32D7FF" font-size="21" font-weight="800">542</text>
   <text x="56" y="257" fill="#64748B" font-size="9" font-weight="700">LAST 14 DAYS</text>
   <rect x="197" y="211" width="151" height="61" rx="8" fill="#0D151F" stroke="#263244"/>
-  <text x="213" y="239" fill="#F8FAFC" font-size="21" font-weight="800">53</text>
+  <text x="213" y="239" fill="#F8FAFC" font-size="21" font-weight="800">55</text>
   <text x="213" y="257" fill="#64748B" font-size="9" font-weight="700">REPOSITORIES</text>
   <text x="40" y="297" fill="#526174" font-size="9">ARCHIVE ACTIVE / SINCE 29 JUL 2026</text>
 
@@ -40,8 +40,8 @@
   <text x="397" y="232" fill="#526174" font-size="8" font-weight="700">14-DAY SIGNAL</text>
   <g clip-path="url(#plot)">
     <line x1="397" y1="272" x2="755" y2="272" stroke="#263244" stroke-dasharray="3 6"/>
-    <polyline points="397.0,271.8 419.4,267.9 441.8,264.3 464.1,269.6 486.5,263.3 508.9,268.9 531.2,266.7 553.6,262.1 576.0,259.5 598.4,261.1 620.8,266.0 643.1,238.0 665.5,257.8 687.9,268.4 710.2,264.0 732.6,272.0 755.0,272.0" fill="none" stroke="#32D7FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="397.0,271.8 418.1,267.9 439.1,264.3 460.2,269.6 481.2,263.3 502.3,268.9 523.4,266.7 544.4,262.1 565.5,259.5 586.5,261.1 607.6,266.0 628.6,238.0 649.7,257.8 670.8,268.4 691.8,264.0 712.9,272.0 733.9,272.0 755.0,272.0" fill="none" stroke="#32D7FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  <text x="755" y="297" fill="#526174" font-size="9" text-anchor="end">SYNC / SEP 25, 2026</text>
+  <text x="755" y="297" fill="#526174" font-size="9" text-anchor="end">SYNC / SEP 26, 2026</text>
 </g>
 </svg>

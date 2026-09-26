@@ -51,10 +51,12 @@
     "futbol-script",
     "google-deepmind",
     "innorve",
+    "inventoryeye-outlets",
+    "parcelwise",
     "restaurants",
     "shopping_list"
   ],
-  "lastUpdated": "2026-09-25T08:52:19.970205+00:00",
+  "lastUpdated": "2026-09-26T08:38:36.959754+00:00",
   "repositories": {
     "ARC-BELL-SYSTEM": {
       "baselineClones": 0,
@@ -3269,6 +3271,10 @@
         "2026-09-25": {
           "clones": 0,
           "unique": 0
+        },
+        "2026-09-26": {
+          "clones": 0,
+          "unique": 0
         }
       }
     },
@@ -3557,6 +3563,10 @@
           "unique": 0
         },
         "2026-09-25": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-26": {
           "clones": 0,
           "unique": 0
         }
@@ -4133,6 +4143,10 @@
           "unique": 0
         },
         "2026-09-25": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-26": {
           "clones": 0,
           "unique": 0
         }
@@ -4995,6 +5009,10 @@
           "unique": 0
         },
         "2026-09-25": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-26": {
           "clones": 0,
           "unique": 0
         }
@@ -9467,6 +9485,10 @@
         "2026-09-25": {
           "clones": 0,
           "unique": 0
+        },
+        "2026-09-26": {
+          "clones": 0,
+          "unique": 0
         }
       }
     },
@@ -9755,6 +9777,10 @@
           "unique": 0
         },
         "2026-09-25": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-26": {
           "clones": 0,
           "unique": 0
         }
@@ -10803,6 +10829,10 @@
         "2026-09-25": {
           "clones": 0,
           "unique": 0
+        },
+        "2026-09-26": {
+          "clones": 0,
+          "unique": 0
         }
       }
     },
@@ -11177,6 +11207,10 @@
           "unique": 0
         },
         "2026-09-25": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-26": {
           "clones": 0,
           "unique": 0
         }
@@ -11755,6 +11789,10 @@
         "2026-09-25": {
           "clones": 0,
           "unique": 0
+        },
+        "2026-09-26": {
+          "clones": 0,
+          "unique": 0
         }
       }
     },
@@ -12035,6 +12073,10 @@
           "unique": 0
         },
         "2026-09-25": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-26": {
           "clones": 0,
           "unique": 0
         }
@@ -13553,6 +13595,134 @@
         "2026-09-25": {
           "clones": 0,
           "unique": 0
+        },
+        "2026-09-26": {
+          "clones": 0,
+          "unique": 0
+        }
+      }
+    },
+    "inventoryeye-outlets": {
+      "baselineClones": 0,
+      "baselineThrough": "",
+      "days": {
+        "2026-09-13": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-14": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-15": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-16": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-17": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-18": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-19": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-20": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-21": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-22": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-23": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-24": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-25": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-26": {
+          "clones": 0,
+          "unique": 0
+        }
+      }
+    },
+    "parcelwise": {
+      "baselineClones": 0,
+      "baselineThrough": "",
+      "days": {
+        "2026-09-13": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-14": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-15": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-16": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-17": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-18": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-19": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-20": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-21": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-22": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-23": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-24": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-25": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-26": {
+          "clones": 0,
+          "unique": 0
         }
       }
     },
@@ -13843,6 +14013,10 @@
         "2026-09-25": {
           "clones": 0,
           "unique": 0
+        },
+        "2026-09-26": {
+          "clones": 0,
+          "unique": 0
         }
       }
     },
@@ -14131,6 +14305,10 @@
           "unique": 0
         },
         "2026-09-25": {
+          "clones": 0,
+          "unique": 0
+        },
+        "2026-09-26": {
           "clones": 0,
           "unique": 0
         }
