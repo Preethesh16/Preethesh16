@@ -40,8 +40,8 @@
   <text x="397" y="232" fill="#526174" font-size="8" font-weight="700">14-DAY SIGNAL</text>
   <g clip-path="url(#plot)">
     <line x1="397" y1="272" x2="755" y2="272" stroke="#263244" stroke-dasharray="3 6"/>
-    <polyline points="397.0,271.8 418.1,267.9 439.1,264.3 460.2,269.6 481.2,263.3 502.3,268.9 523.4,266.7 544.4,262.1 565.5,259.5 586.5,261.1 607.6,266.0 628.6,238.0 649.7,257.8 670.8,268.4 691.8,264.0 712.9,272.0 733.9,272.0 755.0,272.0" fill="none" stroke="#32D7FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="397.0,271.8 416.9,267.9 436.8,264.3 456.7,269.6 476.6,263.3 496.4,268.9 516.3,266.7 536.2,262.1 556.1,259.5 576.0,261.1 595.9,266.0 615.8,238.0 635.7,257.8 655.6,268.4 675.4,264.0 695.3,272.0 715.2,272.0 735.1,272.0 755.0,272.0" fill="none" stroke="#32D7FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  <text x="755" y="297" fill="#526174" font-size="9" text-anchor="end">SYNC / SEP 26, 2026</text>
+  <text x="755" y="297" fill="#526174" font-size="9" text-anchor="end">SYNC / SEP 27, 2026</text>
 </g>
 </svg>
