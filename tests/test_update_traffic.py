@@ -1,7 +1,17 @@
 import unittest
 from datetime import date
 
-from scripts.update_traffic import recent_daily_counts
+from scripts.update_traffic import recent_daily_counts, sparkline
+
+
+class SparklineTests(unittest.TestCase):
+    def test_single_observation_stays_level(self):
+        self.assertEqual(sparkline([5], x=0, y=0, width=10, height=10), "0.0,0.0 10.0,0.0")
+
+    def test_empty_and_zero_activity_stay_on_baseline(self):
+        for values in ([], [0]):
+            with self.subTest(values=values):
+                self.assertEqual(sparkline(values, x=0, y=0, width=10, height=10), "0.0,10.0 10.0,10.0")
 
 
 class RecentDailyCountsTests(unittest.TestCase):
