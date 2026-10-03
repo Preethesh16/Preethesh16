@@ -66,7 +66,7 @@ def sparkline(values, x=397, y=238, width=358, height=34):
         for index, value in enumerate(values)
     ]
     if len(points) == 1:
-        points.append(f"{x + width:.1f},{y + height:.1f}")
+        points.append(f"{x + width:.1f},{y + height - (values[0] / peak) * height:.1f}")
     return " ".join(points)
 
 
