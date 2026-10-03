@@ -32,6 +32,16 @@
 
 <hr />
 
+## 🛠️ Selected projects
+
+| Project | What it does | Explore |
+| --- | --- | --- |
+| **Novato** | A Linux terminal companion for installing software by intent, explaining command errors, learning terminal basics, and reviewing storage. Supports online, offline, and Basic modes. | [Source & setup](https://github.com/Preethesh16/Novato) · [User manual](https://github.com/Preethesh16/Novato/blob/main/USERMANUAL.md) |
+| **TidePlan** | A browser-based prototype that compares cash-flow-aware repayment schedules and records explicit borrower consent. Uses synthetic data; no money moves. | [Interactive demo](https://preethesh16.github.io/Tideplan/) · [Source & architecture](https://github.com/Preethesh16/Tideplan) |
+| **Svara Studio** | A multilingual creative workspace for chat, image briefs, voice sessions, and campaign websites, with durable spending controls. | [Source & local setup](https://github.com/Preethesh16/svara-studio) · [Walkthrough](https://github.com/Preethesh16/svara-studio/blob/main/docs/walkthrough.md) |
+
+<hr />
+
 ## ⚡ The stack
 
 <div align="center">
