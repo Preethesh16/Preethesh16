@@ -7,7 +7,7 @@ import os
 import sys
 import urllib.error
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 OWNER = "Preethesh16"
@@ -68,6 +68,18 @@ def sparkline(values, x=397, y=238, width=358, height=34):
     if len(points) == 1:
         points.append(f"{x + width:.1f},{y + height:.1f}")
     return " ".join(points)
+
+
+def recent_daily_counts(snapshots, today):
+    """Return 14 calendar days, preserving days with no clone activity."""
+    dates = [(today - timedelta(days=offset)).isoformat() for offset in range(13, -1, -1)]
+    counts = dict.fromkeys(dates, 0)
+    for snapshot in snapshots.values():
+        for item in snapshot.get("clones", []):
+            date = item["timestamp"][:10]
+            if date in counts:
+                counts[date] += item["count"]
+    return list(counts.values())
 
 
 def compact_name(name, limit=22):
@@ -191,27 +203,7 @@ def main():
 
     overall = sum(totals.values())
     recent = sum(snapshot["count"] for snapshot in snapshots.values())
-    all_dates = sorted(
-        {
-            item["timestamp"][:10]
-            for snapshot in snapshots.values()
-            for item in snapshot.get("clones", [])
-        }
-    )
-    daily = [
-        sum(
-            next(
-                (
-                    item["count"]
-                    for item in snapshot.get("clones", [])
-                    if item["timestamp"][:10] == date
-                ),
-                0,
-            )
-            for snapshot in snapshots.values()
-        )
-        for date in all_dates
-    ]
+    daily = recent_daily_counts(snapshots, datetime.now(timezone.utc).date())
     top_repos = sorted(totals.items(), key=lambda item: (-item[1], item[0].lower()))
     updated = datetime.now(timezone.utc).strftime("%b %d, %Y")
 
