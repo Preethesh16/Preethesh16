@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Track permanent clone history across every accessible GitHub repository."""
 
+import argparse
 import html
 import json
 import os
@@ -57,6 +58,62 @@ def owned_repositories(token):
         page += 1
 
 
+def public_repository_names(repositories):
+    return sorted({repo["name"] for repo in repositories if repo.get("private") is False})
+
+
+def recent_window(snapshots, as_of):
+    """Exactly 14 UTC calendar dates, including the partial collection day.
+
+    Only successful API responses belong in snapshots; omitted dates in those
+    responses are zero. Failed repositories must not be supplied as zeroes.
+    """
+    dates = [(as_of - timedelta(days=offset)).isoformat() for offset in range(13, -1, -1)]
+    counts = dict.fromkeys(dates, 0)
+    for snapshot in snapshots.values():
+        for item in snapshot.get("clones", []):
+            day = item["timestamp"][:10]
+            if day in counts:
+                counts[day] += item["count"]
+    return [{"date": day, "clones": count} for day, count in counts.items()]
+
+
+def recent_daily_counts(snapshots, today):
+    return [day["clones"] for day in recent_window(snapshots, today)]
+
+
+def write_outputs(history):
+    updated_at = datetime.fromisoformat(history["lastUpdated"])
+    names = history["accessibleRepositories"]
+    window = history.get("recentWindow")
+    if window is None:
+        # Older archives have daily values but no saved chart window.
+        snapshots = {
+            name: {"clones": [
+                {"timestamp": day, "count": value["clones"]}
+                for day, value in history["repositories"][name].get("days", {}).items()
+            ]} for name in names
+        }
+        window = recent_window(snapshots, updated_at.astimezone(timezone.utc).date())
+    totals = {
+        name: record.get("baselineClones", 0) + sum(
+            day["clones"] for day in record.get("days", {}).values()
+        ) for name, record in history["repositories"].items()
+    }
+    overall = sum(totals.values())
+    daily = [day["clones"] for day in window]
+    top_repos = sorted(totals.items(), key=lambda item: (-item[1], item[0].lower()))
+    write_json(BADGE_PATH, {
+        "schemaVersion": 1, "label": "overall tracked clones",
+        "message": str(overall), "color": "8b5cf6",
+    })
+    SVG_PATH.write_text(render_svg(
+        overall, sum(daily), len(history["publicRepositories"]) if "publicRepositories" in history else None, daily, top_repos,
+        updated_at.strftime("%b %d, %Y"), window,
+        bool(history.get("inaccessibleRepositories")),
+    ), encoding="utf-8")
+
+
 def sparkline(values, x=397, y=238, width=358, height=34):
     values = values or [0]
     peak = max(max(values), 1)
@@ -70,25 +127,17 @@ def sparkline(values, x=397, y=238, width=358, height=34):
     return " ".join(points)
 
 
-def recent_daily_counts(snapshots, today):
-    """Return 14 calendar days, preserving days with no clone activity."""
-    dates = [(today - timedelta(days=offset)).isoformat() for offset in range(13, -1, -1)]
-    counts = dict.fromkeys(dates, 0)
-    for snapshot in snapshots.values():
-        for item in snapshot.get("clones", []):
-            date = item["timestamp"][:10]
-            if date in counts:
-                counts[date] += item["count"]
-    return list(counts.values())
-
-
 def compact_name(name, limit=22):
     """Keep long repository names inside the fixed-width SVG column."""
     return name if len(name) <= limit else name[: limit - 1] + "…"
 
 
-def render_svg(total, recent, repo_count, daily, top_repos, updated):
+def render_svg(total, recent, repo_count, daily, top_repos, updated, window, partial=False):
+    public_count = f"{repo_count:,}" if repo_count is not None else "—"
     points = sparkline(daily)
+    date_range = f"{window[0]['date']} — {window[-1]['date']} UTC"
+    status = "PARTIAL" if partial else "DAILY"
+    description = html.escape("; ".join(f"{day['date']}: {day['clones']} clones" for day in window))
     top_lines = []
     peak_repo = max((count for _, count in top_repos[:3]), default=1) or 1
     for index, (name, count) in enumerate(top_repos[:3]):
@@ -109,7 +158,8 @@ def render_svg(total, recent, repo_count, daily, top_repos, updated):
         '<text x="397" y="112" fill="#64748B" font-size="12">Waiting for clone data</text>'
     )
 
-    return f"""<svg width="800" height="320" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{total} tracked clones across {repo_count} repositories">
+    return f"""<svg width="800" height="320" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{total} total tracked clones; {public_count} repositories">
+<desc>{description}. Latest day may be incomplete.</desc>
 <defs>
   <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
     <path d="M24 0H0V24" fill="none" stroke="#263244" stroke-opacity=".22"/>
@@ -128,7 +178,7 @@ def render_svg(total, recent, repo_count, daily, top_repos, updated):
   <text x="75" y="51" fill="#526174" font-size="9">ACCOUNT-WIDE CLONE TELEMETRY</text>
   <rect x="683" y="22" width="82" height="28" rx="14" fill="#0A2428" stroke="#176273"/>
   <circle cx="701" cy="36" r="3" fill="#32D7FF"/>
-  <text x="712" y="40" fill="#7DE9FF" font-size="9" font-weight="800">LIVE FEED</text>
+  <text x="712" y="40" fill="#7DE9FF" font-size="9" font-weight="800">{status}</text>
 
   <text x="40" y="92" fill="#526174" font-size="9" font-weight="700">SYSTEM METRIC / 01</text>
   <text x="40" y="117" fill="#94A3B8" font-size="11" font-weight="700">TOTAL TRACKED CLONES</text>
@@ -139,8 +189,8 @@ def render_svg(total, recent, repo_count, daily, top_repos, updated):
   <text x="56" y="239" fill="#32D7FF" font-size="21" font-weight="800">{recent:,}</text>
   <text x="56" y="257" fill="#64748B" font-size="9" font-weight="700">LAST 14 DAYS</text>
   <rect x="197" y="211" width="151" height="61" rx="8" fill="#0D151F" stroke="#263244"/>
-  <text x="213" y="239" fill="#F8FAFC" font-size="21" font-weight="800">{repo_count:,}</text>
-  <text x="213" y="257" fill="#64748B" font-size="9" font-weight="700">REPOSITORIES</text>
+  <text x="213" y="239" fill="#F8FAFC" font-size="21" font-weight="800">{public_count}</text>
+  <text x="213" y="257" fill="#64748B" font-size="9" font-weight="700">REPOS</text>
   <text x="40" y="297" fill="#526174" font-size="9">ARCHIVE ACTIVE / SINCE 29 JUL 2026</text>
 
   <line x1="373" y1="86" x2="373" y2="296" stroke="#263244"/>
@@ -148,7 +198,7 @@ def render_svg(total, recent, repo_count, daily, top_repos, updated):
   <text x="755" y="91" fill="#526174" font-size="9" font-weight="700" text-anchor="end">CLONES</text>
   {top_markup}
   <line x1="397" y1="220" x2="755" y2="220" stroke="#263244"/>
-  <text x="397" y="232" fill="#526174" font-size="8" font-weight="700">14-DAY SIGNAL</text>
+  <text x="397" y="232" fill="#526174" font-size="8" font-weight="700">DAILY CLONES · {date_range}</text>
   <g clip-path="url(#plot)">
     <line x1="397" y1="272" x2="755" y2="272" stroke="#263244" stroke-dasharray="3 6"/>
     <polyline points="{points}" fill="none" stroke="#32D7FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -160,6 +210,12 @@ def render_svg(total, recent, repo_count, daily, top_repos, updated):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--render-only", action="store_true", help="Render saved data without API access or changing the sync timestamp")
+    args = parser.parse_args()
+    if args.render_only:
+        write_outputs(load_json(HISTORY_PATH))
+        return
     token = os.environ.get("TRAFFIC_TOKEN")
     if not token:
         raise SystemExit("TRAFFIC_TOKEN is required")
@@ -170,6 +226,7 @@ def main():
     failures = []
 
     repositories = owned_repositories(token)
+    history["publicRepositories"] = public_repository_names(repositories)
     for repo in repositories:
         name = repo["name"]
         try:
@@ -195,19 +252,9 @@ def main():
                     "unique": item["uniques"],
                 }
 
-    totals = {}
-    for name, record in repositories_history.items():
-        totals[name] = record.get("baselineClones", 0) + sum(
-            day["clones"] for day in record.get("days", {}).values()
-        )
-
-    overall = sum(totals.values())
-    recent = sum(snapshot["count"] for snapshot in snapshots.values())
-    daily = recent_daily_counts(snapshots, datetime.now(timezone.utc).date())
-    top_repos = sorted(totals.items(), key=lambda item: (-item[1], item[0].lower()))
-    updated = datetime.now(timezone.utc).strftime("%b %d, %Y")
-
-    history["lastUpdated"] = datetime.now(timezone.utc).isoformat()
+    collected_at = datetime.now(timezone.utc)
+    history["recentWindow"] = recent_window(snapshots, collected_at.date())
+    history["lastUpdated"] = collected_at.isoformat()
     history["accessibleRepositories"] = sorted(snapshots)
     if failures:
         history["inaccessibleRepositories"] = failures
@@ -216,19 +263,7 @@ def main():
         history.pop("inaccessibleRepositories", None)
 
     write_json(HISTORY_PATH, history)
-    write_json(
-        BADGE_PATH,
-        {
-            "schemaVersion": 1,
-            "label": "overall tracked clones",
-            "message": str(overall),
-            "color": "8b5cf6",
-        },
-    )
-    SVG_PATH.write_text(
-        render_svg(overall, recent, len(snapshots), daily, top_repos, updated),
-        encoding="utf-8",
-    )
+    write_outputs(history)
 
 
 if __name__ == "__main__":

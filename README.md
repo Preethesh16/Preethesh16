@@ -1,15 +1,8 @@
 <div align="center">
-  <img src="./banner.gif" alt="Preethesh Carvalho — turning ideas into impact" width="100%" loading="eager" />
+  <img src="./banner.gif" alt="Preethesh Carvalho — Full-Stack & AI Systems Engineer" width="100%" loading="eager" />
 
-  <h1>Preethesh Carvalho</h1>
-  <p><b>Full-Stack & AI Systems Engineer · CSBS student · Product-minded builder</b></p>
-
-  <a href="https://github.com/Preethesh16">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=19&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=650&lines=Turning+ideas+into+useful+software;AI+systems+%7C+Full-stack+%7C+Mobile+%7C+Embedded;Learn+%E2%86%92+Build+%E2%86%92+Deploy+%E2%86%92+Impact" alt="Typing introduction" />
-  </a>
-
-  <br />
-  <img src="https://komarev.com/ghpvc/?username=Preethesh16&style=flat-square&color=22c55e&label=PROFILE+VIEWS" alt="Profile views" />
+  <p><sub>CSBS student at SJEC Mangaluru · Open to collaboration</sub></p>
+  <img src="https://komarev.com/ghpvc/?username=Preethesh16&style=flat-square&color=64748b&label=PROFILE+VIEWS" alt="Profile views" />
 </div>
 
 <br />
@@ -81,10 +74,6 @@
   <img width="58%" src="https://streak-stats.demolab.com?user=Preethesh16&theme=tokyonight&hide_border=true" alt="Preethesh's GitHub contribution streak" loading="lazy" />
 </p>
 
-<p align="center">
-  <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=Preethesh16&bg_color=0d1117&color=38bdf8&line=8b5cf6&point=f8fafc&area=true&hide_border=true" alt="Preethesh's contribution activity graph" loading="lazy" />
-</p>
-
 <hr />
 
 ## 📈 Repository traffic
@@ -95,7 +84,7 @@
   </a>
 </div>
 
-<p align="center"><sub>Account-wide clone intelligence · tracking since July 29, 2026 · refreshed daily</sub></p>
+<p align="center"><sub>Account-wide clone history · generated daily from GitHub traffic data · 14-day UTC window as of the displayed sync date; latest day may be incomplete</sub></p>
 
 <hr />
 
