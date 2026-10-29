@@ -1,5 +1,5 @@
-<svg width="800" height="320" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="7705 total tracked clones; 38 repositories">
-<desc>2026-10-15: 30 clones; 2026-10-16: 26 clones; 2026-10-17: 39 clones; 2026-10-18: 35 clones; 2026-10-19: 64 clones; 2026-10-20: 24 clones; 2026-10-21: 36 clones; 2026-10-22: 42 clones; 2026-10-23: 58 clones; 2026-10-24: 43 clones; 2026-10-25: 17 clones; 2026-10-26: 55 clones; 2026-10-27: 29 clones; 2026-10-28: 0 clones. Latest day may be incomplete.</desc>
+<svg width="800" height="320" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="7718 total tracked clones; 38 repositories">
+<desc>2026-10-16: 26 clones; 2026-10-17: 39 clones; 2026-10-18: 35 clones; 2026-10-19: 64 clones; 2026-10-20: 24 clones; 2026-10-21: 36 clones; 2026-10-22: 42 clones; 2026-10-23: 58 clones; 2026-10-24: 43 clones; 2026-10-25: 17 clones; 2026-10-26: 55 clones; 2026-10-27: 29 clones; 2026-10-28: 13 clones; 2026-10-29: 0 clones. Latest day may be incomplete.</desc>
 <defs>
   <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
     <path d="M24 0H0V24" fill="none" stroke="#263244" stroke-opacity=".22"/>
@@ -22,11 +22,11 @@
 
   <text x="40" y="92" fill="#526174" font-size="9" font-weight="700">SYSTEM METRIC / 01</text>
   <text x="40" y="117" fill="#94A3B8" font-size="11" font-weight="700">TOTAL TRACKED CLONES</text>
-  <text x="35" y="180" fill="#F8FAFC" font-size="68" font-weight="800">7,705</text>
+  <text x="35" y="180" fill="#F8FAFC" font-size="68" font-weight="800">7,718</text>
   <line x1="40" y1="193" x2="348" y2="193" stroke="#263244"/>
 
   <rect x="40" y="211" width="145" height="61" rx="8" fill="#0D151F" stroke="#263244"/>
-  <text x="56" y="239" fill="#32D7FF" font-size="21" font-weight="800">498</text>
+  <text x="56" y="239" fill="#32D7FF" font-size="21" font-weight="800">481</text>
   <text x="56" y="257" fill="#64748B" font-size="9" font-weight="700">LAST 14 DAYS</text>
   <rect x="197" y="211" width="151" height="61" rx="8" fill="#0D151F" stroke="#263244"/>
   <text x="213" y="239" fill="#F8FAFC" font-size="21" font-weight="800">38</text>
@@ -38,11 +38,11 @@
   <text x="755" y="91" fill="#526174" font-size="9" font-weight="700" text-anchor="end">CLONES</text>
   <text x="397" y="112" fill="#526174" font-size="10" font-weight="700">01</text><text x="429" y="112" fill="#D7E1EC" font-size="12" font-weight="600">Gavel-Xl</text><text x="755" y="112" fill="#32D7FF" font-size="12" font-weight="800" text-anchor="end">1,158</text><rect x="429" y="124" width="260" height="3" rx="1.5" fill="#172333"/><rect x="429" y="124" width="260" height="3" rx="1.5" fill="#32D7FF"/><text x="397" y="155" fill="#526174" font-size="10" font-weight="700">02</text><text x="429" y="155" fill="#D7E1EC" font-size="12" font-weight="600">Humsafar</text><text x="755" y="155" fill="#32D7FF" font-size="12" font-weight="800" text-anchor="end">844</text><rect x="429" y="167" width="260" height="3" rx="1.5" fill="#172333"/><rect x="429" y="167" width="189" height="3" rx="1.5" fill="#32D7FF"/><text x="397" y="198" fill="#526174" font-size="10" font-weight="700">03</text><text x="429" y="198" fill="#D7E1EC" font-size="12" font-weight="600">Codex</text><text x="755" y="198" fill="#32D7FF" font-size="12" font-weight="800" text-anchor="end">785</text><rect x="429" y="210" width="260" height="3" rx="1.5" fill="#172333"/><rect x="429" y="210" width="176" height="3" rx="1.5" fill="#32D7FF"/>
   <line x1="397" y1="220" x2="755" y2="220" stroke="#263244"/>
-  <text x="397" y="232" fill="#526174" font-size="8" font-weight="700">DAILY CLONES · 2026-10-15 — 2026-10-28 UTC</text>
+  <text x="397" y="232" fill="#526174" font-size="8" font-weight="700">DAILY CLONES · 2026-10-16 — 2026-10-29 UTC</text>
   <g clip-path="url(#plot)">
     <line x1="397" y1="272" x2="755" y2="272" stroke="#263244" stroke-dasharray="3 6"/>
-    <polyline points="397.0,256.1 424.5,258.2 452.1,251.3 479.6,253.4 507.2,238.0 534.7,259.2 562.2,252.9 589.8,249.7 617.3,241.2 644.8,249.2 672.4,263.0 699.9,242.8 727.5,256.6 755.0,272.0" fill="none" stroke="#32D7FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="397.0,258.2 424.5,251.3 452.1,253.4 479.6,238.0 507.2,259.2 534.7,252.9 562.2,249.7 589.8,241.2 617.3,249.2 644.8,263.0 672.4,242.8 699.9,256.6 727.5,265.1 755.0,272.0" fill="none" stroke="#32D7FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  <text x="755" y="297" fill="#526174" font-size="9" text-anchor="end">SYNC / OCT 28, 2026</text>
+  <text x="755" y="297" fill="#526174" font-size="9" text-anchor="end">SYNC / OCT 29, 2026</text>
 </g>
 </svg>
