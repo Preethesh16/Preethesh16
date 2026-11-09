@@ -11,7 +11,7 @@
   <p>
     I’m a Computer Science and Business Systems student at SJEC Mangaluru and a Full-Stack & AI Systems builder. I enjoy creating practical web, mobile, AI, and embedded solutions, turning ideas into useful products, and continuously learning through hackathons, ideathons, and real-world projects.
   </p>
-  <p><b>3× Hackathon Winner</b> · <b>8× Ideathon Winner</b> · Open to collaboration</p>
+  <p><b>4× Hackathon Winner</b> · <b>8× Ideathon Winner</b> · Open to collaboration</p>
 </div>
 
 <hr />
@@ -19,7 +19,7 @@
 ## 🏆 Highlights
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Hackathon%20Winner-3%C3%97-8B5CF6?style=for-the-badge&logo=trophy&logoColor=white" alt="3x Hackathon winner" />
+  <img src="https://img.shields.io/badge/Hackathon%20Winner-4%C3%97-8B5CF6?style=for-the-badge&logo=trophy&logoColor=white" alt="4x Hackathon winner" />
   <img src="https://img.shields.io/badge/Ideathon%20Winner-8%C3%97-06B6D4?style=for-the-badge&logo=lightbulb&logoColor=white" alt="8x Ideathon winner" />
 </div>
 
